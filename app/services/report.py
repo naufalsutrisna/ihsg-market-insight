@@ -10,12 +10,12 @@ WATCHLIST = [
     "BBRI.JK",
     "BMRI.JK",
     "BBNI.JK",
+    "ANTM.JK",
     "TLKM.JK",
     "ASII.JK",
-    "GOTO.JK",
-    "AMMN.JK",
     "ADRO.JK",
-    "BRPT.JK",
+    "ISAT.JK",
+    "UNVR.JK",
 ]
 
 
