@@ -1,4 +1,3 @@
-
 from app.clients.yahoo_finance import get_history
 
 

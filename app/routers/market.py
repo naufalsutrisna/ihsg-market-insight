@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 
 from app.services.market_data import get_market_summary
 from app.services.report import get_closing_insight
-from app.services.discord_formatter import format_closing_insight
+from app.services.formatter import format_closing_insight
 
 
 router = APIRouter(
@@ -37,10 +37,12 @@ def closing_insight():
 def closing_insight_discord():
     try:
         report = get_closing_insight()
+        message = format_closing_insight(report)
+        
         return {
             "report_type": "closing_insight",
             "date": report["date"],
-            "message": format_closing_insight(report),
+            "message": message,
             "ready_to_publish": report["data_quality"]["ready_to_publish"],
             "warnings": report["data_quality"]["warnings"],
         }
